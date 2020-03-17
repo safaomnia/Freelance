@@ -1,0 +1,54 @@
+\begin{frame}
+\titlepage 
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline} 
+    \fontsize{10}{8}\selectfont
+     \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={1-5},hideothersubsections]
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={6-8},hideothersubsections]
+        \end{column}
+    \end{columns}
+\end{frame}
+\AtBeginSection[]
+{
+      \begin{frame}<beamer>{Outline}
+  \fontsize{10}{10}\selectfont
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={1-5},currentsection,hideothersubsections]
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={6-8},currentsection,hideothersubsections]
+        \end{column}
+    \end{columns}
+  \end{frame}
+}
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+  \fontsize{10}{10}\selectfont
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \tableofcontents[
+                sections={1-5}, 
+                currentsection,
+                currentsubsection,
+                subsectionstyle=show/shaded/hide
+            ]
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \tableofcontents[
+                sections={6-8},
+                currentsection,
+                currentsubsection,
+                subsectionstyle=show/shaded/hide
+            ]
+        \end{column}
+    \end{columns}
+  \end{frame}
+}
